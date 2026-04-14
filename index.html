@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Weather</h1>
+
+    <div class="search-row">
+      <input type="text" id="cityInput" placeholder="Search city..." />
+      <button class="search-btn" id="searchBtn" onclick="searchWeather()">Search</button>
+    </div>
+
+    <p class="message error" id="errorMsg"></p>
+    <p class="message loading" id="loadingMsg"></p>
+
+    <div class="weather" id="weatherCard">
+      <div class="divider"></div>
+      <p class="city" id="cityName"></p>
+      <p class="condition" id="condition"></p>
+      <div class="temp-row">
+        <span class="temp" id="temperature"></span>
+        <span class="temp-unit">°C</span>
+      </div>
+      <div class="details">
+        <div class="detail">
+          <p class="detail-label">Feels like</p>
+          <p class="detail-value" id="feelsLike"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">Humidity</p>
+          <p class="detail-value" id="humidity"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">Wind</p>
+          <p class="detail-value" id="wind"></p>
+        </div>
+        <div class="detail">
+          <p class="detail-label">UV Index</p>
+          <p class="detail-value" id="uvIndex"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
